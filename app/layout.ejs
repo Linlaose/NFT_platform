@@ -18,11 +18,15 @@
       src="https://kit.fontawesome.com/bf3cb62f9b.js"
       crossorigin="anonymous"
     ></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css"
+    />
     <link rel="stylesheet" href="./assets/style/all.css" />
   </head>
 
   <body>
-    <header class="border-black bg-projectWhite-500 header border-b-1">
+    <header class="z-10 border-black bg-projectWhite-500 header border-b-1">
       <div class="container flex items-center justify-between px-3 py-4 lg:p-0">
         <!-- 表頭容器 -->
         <div class="col-span-2 col-start-1 lg:py-8">
@@ -90,26 +94,56 @@
             </a>
           </li>
           <!-- 錢包 end -->
-          <div class="relative ml-6 lg:hidden">
+          <div id="burger" class="relative ml-6 overflow-hidden lg:hidden">
             <!-- 漢堡 -->
-            <div
-              id="burger-top-line"
-              class="w-[21px] h-1 bg-black rounded-sm"
-            ></div>
-            <div
-              id="burger-mid-line"
-              class="w-[21px] h-1 bg-black mt-[3px] rounded-sm"
-            ></div>
-            <div
-              id="burger-btm-line"
-              class="w-[21px] h-1 bg-black mt-[3px] rounded-sm"
-            ></div>
+            <i
+              id="xmark"
+              class="absolute text-2xl transition-opacity duration-300 -translate-x-1/2 -translate-y-1/2 opacity-0 -z-10 top-1/2 left-1/2 fa-solid fa-xmark"
+            ></i>
+            <div id="burger-box" class="transition-all duration-300">
+              <div
+                id="burger-top-line"
+                class="w-[21px] h-1 bg-black rounded-sm transition-all duration-300 origin-top-left"
+              ></div>
+              <div
+                id="burger-mid-line"
+                class="w-[21px] h-1 bg-black mt-[3px] rounded-sm transition-all duration-300"
+              ></div>
+              <div
+                id="burger-btm-line"
+                class="w-[21px] h-1 bg-black mt-[3px] rounded-sm transition-all duration-300 origin-bottom-left"
+              ></div>
+            </div>
           </div>
           <!-- 漢堡 end -->
         </ul>
         <!-- 導覽列 end -->
       </div>
       <!-- 表頭容器 end -->
+      <div
+        id="burger-nav"
+        class="absolute w-full h-0 px-3 overflow-hidden text-center transition-all duration-500 bg-white opacity-0 top-16"
+      >
+        <!-- 漢堡導覽 -->
+        <a
+          class="block py-6 text-lg leading-8 border-black border-b-1"
+          href="./explore.html"
+          >探索</a
+        >
+        <a class="block py-6 text-lg leading-8" href="./price.html">市值</a>
+        <button
+          id="btn-wallet"
+          type="button"
+          class="w-full px-6 py-3 text-white mb-9 bg-projectRed-500"
+        >
+          連結錢包
+        </button>
+      </div>
+      <!-- 漢堡導覽 end -->
+      <div
+        id="burger-nav-mask"
+        class="absolute inset-0 transition-opacity duration-500 opacity-0 bg-black/50 -z-10"
+      ></div>
     </header>
 
     <main><%- contents %></main>
@@ -122,7 +156,7 @@
         >
       </div>
     </footer>
-    <script src="../node_modules/flowbite/dist/flowbite.js"></script>
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
     <script src="./assets/js/vendors.js"></script>
     <script src="./assets/js/all.js"></script>
   </body>

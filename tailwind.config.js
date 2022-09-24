@@ -1,7 +1,6 @@
 module.exports = {
   content: [
     "./app/**/*.{html,ejs,js}",
-    "./node_modules/flowbite/**/*.js"
   ],
   theme: {
     container: {
@@ -64,11 +63,21 @@ module.exports = {
           800: "#606060",
           900: "#303030"
         },
+        projectRed: {
+          100: "#faddd8",
+          200: "#f5bbb1",
+          300: "#f09989",
+          400: "#eb7762",
+          500: "#e6553b",
+          600: "#b8442f",
+          700: "#8a3323",
+          800: "#5c2218",
+          900: "#2e110c"
+        },
       },
     },
   },
   plugins: [
-    require('flowbite/plugin'),
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
   ],
