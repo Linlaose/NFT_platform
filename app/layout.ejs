@@ -23,30 +23,39 @@
 
   <body>
     <header class="border-black bg-projectWhite-500 header border-b-1">
-      <div class="container flex items-center justify-between">
+      <div class="container flex items-center justify-between px-3 py-4 lg:p-0">
+        <!-- 表頭容器 -->
         <div class="col-span-2 col-start-1 lg:py-8">
+          <!-- logo -->
           <h1>
             <a
-              class="bg-[url('../images/logo.svg')] whitespace-nowrap indent-[101%] bg-no-repeat overflow-hidden w-[190px] h-10 block"
+              class="bg-[url('../images/logo.svg')] whitespace-nowrap indent-[101%] bg-no-repeat overflow-hidden w-[85px] h-[18px] lg:w-[190px] lg:h-10 block bg-cover bg-center"
               href="./index.html"
               >ART NFT</a
             >
           </h1>
         </div>
+        <!-- logo end -->
         <ul class="flex items-center col-span-8 col-end-12">
+          <!-- 導覽列 -->
           <li
-            class="flex items-center border-black lg:px-12 border-x-1 lg:py-10 lg:h-full"
+            class="flex items-center border-black lg:px-12 lg:border-x-1 lg:py-10 lg:h-full"
           >
+            <!-- 搜尋欄 -->
             <input
               type="text"
-              class="bg-transparent border-0 lg:w-72 lg:h-6 focus:ring-0 ring-0"
+              class="p-0 bg-transparent border-0 lg:w-72 lg:h-6 focus:ring-0 ring-0 md:w-56"
               placeholder="搜尋作品名稱、藝術家名稱"
             />
             <i
-              class="inline-block text-2xl leading-6 transition-colors duration-300 fa-solid fa-magnifying-glass lg:ml-6 hover:cursor-pointer hover:text-red-500"
+              class="inline-block text-2xl transition-colors duration-300 lg:leading-6 fa-solid fa-magnifying-glass md:ml-6 lg:hover:cursor-pointer lg:hover:text-red-500"
             ></i>
           </li>
-          <li class="flex items-center border-black border-r-1 lg:h-full">
+          <!-- 搜尋欄 end -->
+          <li
+            class="items-center hidden border-black lg:flex lg:border-r-1 lg:h-full"
+          >
+            <!-- 探索 -->
             <a
               class="flex items-center text-base font-bold transition-colors duration-300 lg:px-12 lg:py-10 hover:text-red-500 lg:h-full"
               href="./explore.html"
@@ -54,7 +63,11 @@
               探索
             </a>
           </li>
-          <li class="flex items-center border-black border-r-1 lg:h-full">
+          <!-- 探索 end -->
+          <li
+            class="items-center hidden border-black lg:flex lg:border-r-1 lg:h-full"
+          >
+            <!-- 市值 -->
             <a
               class="flex items-center text-base font-bold transition-colors duration-300 lg:px-12 lg:py-10 hover:text-red-500 lg:h-full"
               href="./price.html"
@@ -62,9 +75,11 @@
               市值
             </a>
           </li>
+          <!-- 市值 end -->
           <li
-            class="flex items-center border-black lg:h-full lg:pl-12 lg:py-10"
+            class="items-center hidden border-black lg:flex lg:h-full lg:pl-12 lg:py-10"
           >
+            <!-- 錢包 -->
             <a
               class="flex items-center text-base font-bold transition-colors duration-300 hover:text-red-500 lg:h-full"
               href="./price.html"
@@ -74,8 +89,27 @@
               ></i>
             </a>
           </li>
+          <!-- 錢包 end -->
+          <div class="relative ml-6 lg:hidden">
+            <!-- 漢堡 -->
+            <div
+              id="burger-top-line"
+              class="w-[21px] h-1 bg-black rounded-sm"
+            ></div>
+            <div
+              id="burger-mid-line"
+              class="w-[21px] h-1 bg-black mt-[3px] rounded-sm"
+            ></div>
+            <div
+              id="burger-btm-line"
+              class="w-[21px] h-1 bg-black mt-[3px] rounded-sm"
+            ></div>
+          </div>
+          <!-- 漢堡 end -->
         </ul>
+        <!-- 導覽列 end -->
       </div>
+      <!-- 表頭容器 end -->
     </header>
 
     <main><%- contents %></main>
@@ -83,7 +117,7 @@
     <footer class="footer bg-projectWhite-500">
       <div class="container">
         <small
-          class="block text-center font-noto lg:py-6 hover:underline hover:underline-offset-1 hover:cursor-pointer"
+          class="block text-center font-noto md:py-6 hover:underline hover:underline-offset-1 hover:cursor-pointer"
           >© ART NFT. All Rights Reserved</small
         >
       </div>
