@@ -4,16 +4,17 @@
 
 @layer base {
   body {
-    font-family: "Squada One",
-      "Noto Sans TC",
-      -apple-system,
-      BlinkMacSystemFont,
-      "Segoe UI",
-      "Microsoft JhengHei",
-      "Helvetica Neue",
-      monospace,
-      Arial,
-      "cursive",
-      sans-serif;
+    font-family: "Squada One", "Noto Sans TC", -apple-system, BlinkMacSystemFont,
+      "Segoe UI", "Microsoft JhengHei", "Helvetica Neue", monospace, Arial,
+      "cursive", sans-serif;
   }
-};
+  h2 {
+    @apply text-5xl leading-[50px];
+  }
+}
+
+@layer components {
+  .btn-more {
+    @apply relative px-12 py-2 overflow-hidden transition-all duration-300 bg-white border-black border-1 hover:text-white hover:bg-projectRed-500;
+  }
+} ;

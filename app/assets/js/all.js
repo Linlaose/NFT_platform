@@ -1,4 +1,5 @@
 /* 漢堡 */
+// 變數
 const burgerBox = document.querySelector('#burger-box');
 const burgerTopLine = document.querySelector('#burger-top-line');
 const burgerMidLine = document.querySelector('#burger-mid-line');
@@ -7,6 +8,7 @@ const burgerNav = document.querySelector('#burger-nav');
 const burgerNavMask = document.querySelector('#burger-nav-mask');
 const xMark = document.querySelector('#xmark');
 
+// 方法函式
 const burgerMenu = () => {
   burgerBox.classList.add('translate-x-full');
   xMark.classList.remove('opacity-0', '-z-10');
@@ -17,13 +19,16 @@ const burgerCancel = () => {
 };
 const burgerNavShow = () => {
   burgerNav.classList.remove('h-0', 'opacity-0');
-  burgerNavMask.classList.remove('opacity-0');
+  burgerNavMask.classList.remove('opacity-0', '-z-10');
+  burgerNavMask.classList.add('z-10');
 };
 const burgerNavHide = () => {
   burgerNav.classList.add('h-0', 'opacity-0');
-  burgerNavMask.classList.add('opacity-0');
+  burgerNavMask.classList.add('opacity-0', '-z-10');
+  burgerNavMask.classList.remove('z-10');
 };
 
+// 事件監聽
 burgerBox.addEventListener('click', () => {
   burgerMenu();
   burgerNavShow();
@@ -35,6 +40,7 @@ xMark.addEventListener('click', () => {
 /* 漢堡 end */
 
 /* search */
+// 變數
 const btnSearch = document.querySelector('#btn-search');
 const burger = document.querySelector('#burger');
 const logoBox = document.querySelector('#logo-box');
@@ -43,6 +49,7 @@ const nav = document.querySelector('#nav');
 const navSearch = document.querySelector('#nav-search');
 const btnSearchCancel = document.querySelector('#btn-search-cancel');
 
+// 方法函式
 const search = () => {
   burger.classList.add('hidden');
   logoBox.classList.add('hidden');
@@ -60,9 +67,11 @@ const searchCancel = () => {
   btnSearchCancel.classList.add('hidden');
 };
 
+// 事件監聽
 btnSearch.addEventListener('click', () => {
   search();
 });
 btnSearchCancel.addEventListener('click', () => {
   searchCancel();
 });
+/* search end */

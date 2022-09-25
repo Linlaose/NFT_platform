@@ -5,6 +5,9 @@ module.exports = {
   theme: {
     container: {
       center: true,
+      padding: {
+        DEFAULT: '12px',
+      },
     },
     screens: {
       'sm': '640px',
@@ -16,7 +19,7 @@ module.exports = {
       'lg': '1024px',
       // => @media (min-width: 1024px) { ... }
 
-      'xl': '1296px',
+      'xl': '1320px',
       // => @media (min-width: 1280px) { ... }
 
       '2xl': '1536px',
@@ -47,6 +50,7 @@ module.exports = {
       },
       borderWidth: {
         '1': '1px',
+        '16': '16px',
       },
       fontSize: {
         '32px': '2rem',
@@ -75,10 +79,16 @@ module.exports = {
           900: "#2e110c"
         },
       },
+      lineHeight: {
+        '19': '19px',
+      },
     },
   },
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
+    require('tailwindcss-writing-mode')({
+      variants: ['responsive', 'hover']
+    })
   ],
 }

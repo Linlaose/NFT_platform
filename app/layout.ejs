@@ -27,7 +27,9 @@
 
   <body>
     <header class="z-10 border-black bg-projectWhite-500 header border-b-1">
-      <div class="container flex items-center justify-between px-3 py-4 lg:p-0">
+      <div
+        class="flex items-center justify-between px-3 py-4 lg:container lg:p-0"
+      >
         <!-- 表頭容器 -->
         <div id="logo-box" class="col-span-2 col-start-1 lg:py-8">
           <!-- logo -->
@@ -149,14 +151,17 @@
         </button>
       </div>
       <!-- 漢堡導覽 end -->
-      <!-- 漢堡遮罩 -->
+
       <div
         id="burger-nav-mask"
-        class="absolute inset-0 transition-opacity duration-500 opacity-0 bg-black/50 -z-10"
-      ></div>
+        class="absolute inset-0 transition-opacity duration-500 mt-[309px] opacity-0 bg-black/50 -z-10"
+      >
+        <!-- 漢堡遮罩 -->
+      </div>
+      <!-- 漢堡遮罩end -->
     </header>
 
-    <main><%- contents %></main>
+    <main class="lg:pt-10 bg-projectWhite-500"><%- contents %></main>
 
     <footer class="footer bg-projectWhite-500">
       <div class="container">
