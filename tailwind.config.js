@@ -54,6 +54,7 @@ module.exports = {
       },
       fontSize: {
         '32px': '2rem',
+        rankSpan: ['32px', '45px']
       },
       colors: {
         projectWhite: {
@@ -80,7 +81,15 @@ module.exports = {
         },
       },
       lineHeight: {
+        '17': '17px',
         '19': '19px',
+        '26': '26px',
+      },
+      height: {
+        '90': '90px',
+      },
+      zIndex: {
+        '1': '1',
       },
     },
   },
