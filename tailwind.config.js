@@ -54,7 +54,9 @@ module.exports = {
       },
       fontSize: {
         '32px': '2rem',
-        rankSpan: ['32px', '45px']
+        rankSpan: ['32px', '45px'],
+        carouselPcTitle: ['80px', '85px'],
+        carouselMobileTitle: ['32px', '34px'],
       },
       colors: {
         projectWhite: {
@@ -90,6 +92,9 @@ module.exports = {
       },
       zIndex: {
         '1': '1',
+      },
+      scale: {
+        '10': '.1',
       },
     },
   },
