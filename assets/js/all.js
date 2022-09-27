@@ -90,10 +90,10 @@ var artistSwiper = new Swiper(".artistSwiper", (_Swiper = {
   slidesPerView: 3,
   loop: true,
   grabCursor: true,
-  // autoplay: {
-  //   delay: 3000,
-  //   disableOnInteraction: false
-  // },
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false
+  },
   centeredSlides: true
 }, _defineProperty(_Swiper, "slidesPerView", 1), _defineProperty(_Swiper, "breakpoints", {
   768: {
