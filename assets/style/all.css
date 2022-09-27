@@ -797,14 +797,14 @@ select {
 .hidden {
   display: none;
 }
-.h-full {
-  height: 100%;
-}
 .h-0 {
   height: 0px;
 }
 .h-\[91px\] {
   height: 91px;
+}
+.h-full {
+  height: 100%;
 }
 .h-\[95px\] {
   height: 95px;
