@@ -2,10 +2,10 @@ var artistSwiper = new Swiper(".artistSwiper", {
   slidesPerView: 3,
   loop: true,
   grabCursor: true,
-  // autoplay: {
-  //   delay: 3000,
-  //   disableOnInteraction: false
-  // },
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false
+  },
   centeredSlides: true,
   slidesPerView: 1,
   breakpoints: {
