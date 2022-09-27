@@ -80,4 +80,33 @@ btnSearchCancel.addEventListener('click', function () {
   searchCancel();
 });
 /* search end */
+"use strict";
+
+var _Swiper;
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var artistSwiper = new Swiper(".artistSwiper", (_Swiper = {
+  slidesPerView: 3,
+  loop: true,
+  grabCursor: true,
+  // autoplay: {
+  //   delay: 3000,
+  //   disableOnInteraction: false
+  // },
+  centeredSlides: true
+}, _defineProperty(_Swiper, "slidesPerView", 1), _defineProperty(_Swiper, "breakpoints", {
+  768: {
+    slidesPerView: 2.3
+  },
+  1200: {
+    slidesPerView: 2.88
+  },
+  1400: {
+    slidesPerView: 3
+  }
+}), _defineProperty(_Swiper, "spaceBetween", 24), _defineProperty(_Swiper, "effect", 'slide'), _defineProperty(_Swiper, "pagination", {
+  el: ".swiper-pagination",
+  clickable: true
+}), _Swiper));
 //# sourceMappingURL=all.js.map
