@@ -109,4 +109,15 @@ var artistSwiper = new Swiper(".artistSwiper", (_Swiper = {
   el: ".swiper-pagination",
   clickable: true
 }), _Swiper));
+"use strict";
+
+var artworkMasonry = new Masonry('#artwork-masonry', {
+  itemSelector: '#artwork-item',
+  horizontalOrder: true,
+  columnWidth: '#grid-sizer',
+  percentPosition: true
+});
+imagesLoaded("#artwork-masonry").on("progress", function () {
+  artworkMasonry.layout();
+});
 //# sourceMappingURL=all.js.map
