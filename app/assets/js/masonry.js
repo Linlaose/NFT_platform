@@ -1,7 +1,9 @@
-// init with element
-let artwork = document.querySelector('#');
-let artMasonry = new Masonry(artwork, {
-  // options...
-  itemSelector: '.grid-item',
-  columnWidth: 200
+let artworkMasonry = new Masonry('#artwork-masonry', {
+  itemSelector: '#artwork-item',
+  horizontalOrder: true,
+  columnWidth: '#grid-sizer',
+  percentPosition: true
+});
+imagesLoaded("#artwork-masonry").on("progress", () => {
+  artworkMasonry.layout();
 });

@@ -51,6 +51,7 @@ module.exports = {
       borderWidth: {
         '1': '1px',
         '16': '16px',
+        '24': '24px',
       },
       fontSize: {
         '32px': '2rem',
