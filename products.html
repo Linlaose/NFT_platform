@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" href="./assets/images/favicon.png" />
+    <title>ART NFT | 作品</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Paytone+One&family=Squada+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/bf3cb62f9b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css"
+    />
+    <link rel="stylesheet" href="./assets/style/all.css" />
+  </head>
+
+  <body>
+    <header
+      class="sticky top-0 z-10 border-black bg-projectWhite-500 header border-b-1"
+    >
+      <div
+        class="flex items-center justify-between px-3 py-4 lg:container lg:py-0"
+      >
+        <!-- 表頭容器 -->
+        <div id="logo-box" class="col-span-2 col-start-1 lg:py-8">
+          <!-- logo -->
+          <h1>
+            <a
+              class="bg-[url('../images/logo.svg')] whitespace-nowrap indent-[101%] bg-no-repeat overflow-hidden w-[85px] h-[18px] lg:w-[190px] lg:h-10 block bg-cover bg-center"
+              href="./index.html"
+              >ART NFT</a
+            >
+          </h1>
+        </div>
+        <!-- logo end -->
+        <ul id="nav" class="flex items-center col-span-8 col-end-12">
+          <!-- 導覽列 -->
+          <li
+            id="nav-search"
+            class="flex items-center border-black lg:px-12 lg:border-x-1 lg:py-10 lg:h-full"
+          >
+            <!-- 搜尋欄 -->
+            <div class="flex">
+              <i
+                id="btn-search-cancel"
+                class="hidden text-2xl transition-colors duration-300 lg:leading-6 fa-solid fa-angle-left"
+              ></i>
+              <input
+                id="serach-field"
+                type="text"
+                class="hidden w-56 p-0 ml-4 bg-transparent border-0 lg:w-72 lg:h-6 focus:ring-0 ring-0 md:block md:ml-0"
+                placeholder="搜尋作品名稱、藝術家名稱"
+              />
+            </div>
+            <i
+              id="btn-search"
+              class="inline-block text-2xl transition-colors duration-300 lg:leading-6 fa-solid fa-magnifying-glass md:ml-6 lg:hover:cursor-pointer lg:hover:text-red-500"
+            ></i>
+          </li>
+          <!-- 搜尋欄 end -->
+          <li
+            class="items-center hidden border-black lg:flex lg:border-r-1 lg:h-full"
+          >
+            <!-- 探索 -->
+            <a
+              class="flex items-center text-base font-bold transition-colors duration-300 lg:px-12 lg:py-10 hover:text-red-500 lg:h-full"
+              href="./explore.html"
+            >
+              探索
+            </a>
+          </li>
+          <!-- 探索 end -->
+          <li
+            class="items-center hidden border-black lg:flex lg:border-r-1 lg:h-full"
+          >
+            <!-- 市值 -->
+            <a
+              class="flex items-center text-base font-bold transition-colors duration-300 lg:px-12 lg:py-10 hover:text-red-500 lg:h-full"
+              href="./price.html"
+            >
+              市值
+            </a>
+          </li>
+          <!-- 市值 end -->
+          <li
+            class="items-center hidden border-black lg:flex lg:h-full lg:pl-12 lg:py-10"
+          >
+            <!-- 錢包 -->
+            <a
+              class="flex items-center text-base font-bold transition-colors duration-300 hover:text-red-500 lg:h-full"
+              href="./price.html"
+            >
+              <i
+                class="inline-block text-2xl leading-6 transition-colors duration-300 fa-solid fa-wallet hover:cursor-pointer hover:text-red-500"
+              ></i>
+            </a>
+          </li>
+          <!-- 錢包 end -->
+          <div id="burger" class="relative ml-6 overflow-hidden lg:hidden">
+            <!-- 漢堡 -->
+            <i
+              id="xmark"
+              class="absolute text-2xl transition-opacity duration-300 -translate-x-1/2 -translate-y-1/2 opacity-0 -z-10 top-1/2 left-1/2 fa-solid fa-xmark"
+            ></i>
+            <div id="burger-box" class="transition-all duration-300">
+              <div
+                id="burger-top-line"
+                class="w-[21px] h-1 bg-black rounded-sm transition-all duration-300 origin-top-left"
+              ></div>
+              <div
+                id="burger-mid-line"
+                class="w-[21px] h-1 bg-black mt-[3px] rounded-sm transition-all duration-300"
+              ></div>
+              <div
+                id="burger-btm-line"
+                class="w-[21px] h-1 bg-black mt-[3px] rounded-sm transition-all duration-300 origin-bottom-left"
+              ></div>
+            </div>
+          </div>
+          <!-- 漢堡 end -->
+        </ul>
+        <!-- 導覽列 end -->
+      </div>
+      <!-- 表頭容器 end -->
+      <div
+        id="burger-nav"
+        class="absolute w-full h-0 px-3 overflow-hidden text-center transition-all duration-500 bg-white opacity-0 top-16"
+      >
+        <!-- 漢堡導覽 -->
+        <a
+          class="block py-6 text-lg leading-8 border-black border-b-1"
+          href="./explore.html"
+          >探索</a
+        >
+        <a class="block py-6 text-lg leading-8" href="./price.html">市值</a>
+        <button
+          id="btn-wallet"
+          type="button"
+          class="w-full px-6 py-3 text-white mb-9 bg-projectRed-500"
+        >
+          連結錢包
+        </button>
+      </div>
+      <!-- 漢堡導覽 end -->
+    </header>
+
+    <main class="lg:pt-10 bg-projectWhite-500">
+<section>
+  <div class="container">
+    <div class="grid-cols-12 lg:grid gap-x-6">
+      <div class="col-span-9 bg-white lg:flex">
+        <!-- 人物介紹 -->
+        <img
+          class="lg:w-5/12"
+          src="./assets/images/artist01.jpg"
+          alt="Michael Arana"
+        />
+        <div class="px-4 py-6 border border-black lg:p-6">
+          <!-- 人物詳細介紹 -->
+          <div class="flex items-center justify-between">
+            <!-- 人名 -->
+            <h2 class="text-[32px] leading-none lg:text-5xl">Michael</h2>
+            <div class="flex gap-2">
+              <a
+                class="leading-4 text-black transition-colors duration-300 hover:text-projectRed-500"
+                href=""
+                ><i class="fa-brands fa-discord"></i
+              ></a>
+              <a
+                class="leading-4 text-black transition-colors duration-300 hover:text-projectRed-500"
+                href=""
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a
+                class="leading-4 text-black transition-colors duration-300 hover:text-projectRed-500"
+                href=""
+                ><i class="fa-solid fa-globe"></i
+              ></a>
+              <a
+                class="leading-4 text-black transition-colors duration-300 hover:text-projectRed-500"
+                href=""
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+            </div>
+          </div>
+          <!-- 人名 end -->
+          <span class="block mt-4 text-base leading-none">0x3ya666…88ef</span>
+          <p class="mt-6 text-base text-justify font-noto">
+            Michael自小在山林長大，能夠與花草樹木大自然進行靈體溝通，創作題材常見大山、大水、花草與樹木，從日常生活出發，擁有個⼈獨樹⼀格的創作風格，作品觸及靈魂深處、探索未知宇宙，透過與大自然的溝通，探討著存在的本質。​
+          </p>
+        </div>
+        <!-- 人物詳細介紹 end -->
+      </div>
+      <!-- 人物介紹 end -->
+      <ul
+        class="col-span-3 mt-4 bg-white border border-black divide-y divide-black lg:mt-0"
+      >
+        <li class="flex items-center justify-between px-6 py-4">
+          <p class="text-base font-bold">販售中</p>
+          <strong class="text-[32px] leading-none font-normal">168</strong>
+        </li>
+        <li class="flex items-center justify-between px-6 py-4">
+          <p class="text-base font-bold">地板價格</p>
+          <strong class="text-[32px] leading-none font-normal"
+            >0.6 <span class="text-2xl">ETH</span></strong
+          >
+        </li>
+        <li class="flex items-center justify-between px-6 py-4">
+          <p class="text-base font-bold font-noto">7 日成交</p>
+          <strong class="text-[32px] leading-none font-normal"
+            >8.8 <span class="text-2xl">ETH</span></strong
+          >
+        </li>
+        <li class="flex items-center justify-between px-6 py-4">
+          <p class="text-base font-bold font-noto">30 日成交</p>
+          <strong class="text-[32px] leading-none font-normal"
+            >23.1 <span class="text-2xl">ETH</span></strong
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+
+    <footer class="footer bg-projectWhite-500">
+      <div class="container">
+        <small
+          class="block py-6 text-center font-noto hover:underline hover:underline-offset-1 hover:cursor-pointer"
+          >© ART NFT. All Rights Reserved</small
+        >
+      </div>
+    </footer>
+    <div
+      id="burger-nav-mask"
+      class="fixed inset-0 h-screen transition-opacity duration-500 mt-[309px] opacity-0 bg-black/50 -z-10"
+    >
+      <!-- 漢堡遮罩 -->
+    </div>
+    <!-- 漢堡遮罩end -->
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
+  </body>
+</html>
