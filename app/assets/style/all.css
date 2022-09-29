@@ -17,7 +17,7 @@
   .btn-more {
     @apply relative px-12 py-2 overflow-hidden transition-all duration-300 bg-white border-black border-1 hover:text-white hover:bg-projectRed-500;
   }
-} ;
+}
 
 /* carousel */
 /* artistSiwper */
@@ -53,28 +53,28 @@
   object-fit: cover;
 }
 
-.artistSwiper .swiper-slide.swiper-slide-active{
+.artistSwiper .swiper-slide.swiper-slide-active {
   @apply md:w-[45%] !important;
 }
-.artistSwiper .swiper-slide.swiper-slide-active .transform-scale{
-  @apply scale-100 opacity-100
+.artistSwiper .swiper-slide.swiper-slide-active .transform-scale {
+  @apply scale-100 opacity-100;
 }
 
-.artistSwiper .swiper-wrapper{
-  @apply h-[344px] lg:h-[439px] !important
+.artistSwiper .swiper-wrapper {
+  @apply h-[344px] lg:h-[439px] !important;
 }
 .artistSwiper .swiper-slide {
-  @apply h-[232px] lg:h-[439px]
+  @apply h-[232px] lg:h-[439px];
 }
 .artistSwiper .swiper-slide.swiper-slide-prev,
 .artistSwiper .swiper-slide.swiper-slide-next {
-  @apply md:w-[26%] md:h-1/2 grayscale !important; 
+  @apply md:w-[26%] md:h-1/2 grayscale !important;
 }
 
-.artistSwiper .swiper-pagination-bullet.swiper-pagination-bullet-active{
-  @apply w-4 h-2 bg-projectRed-500 transition-all duration-300
+.artistSwiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  @apply w-4 h-2 transition-all duration-300 bg-projectRed-500;
 }
-.artistSwiper .swiper-pagination-bullet{
-  @apply bg-black rounded-none opacity-100 transition-all duration-300
+.artistSwiper .swiper-pagination-bullet {
+  @apply transition-all duration-300 bg-black rounded-none opacity-100;
 }
 /* carousel end */
