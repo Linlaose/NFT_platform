@@ -153,18 +153,9 @@
         </button>
       </div>
       <!-- 漢堡導覽 end -->
-      <div
-        id="burger-nav-mask"
-        class="absolute inset-0 h-screen transition-opacity duration-500 mt-[309px] opacity-0 bg-black/50 -z-10"
-      >
-        <!-- 漢堡遮罩 -->
-      </div>
-      <!-- 漢堡遮罩end -->
     </header>
 
-    <main class="relative z-20 lg:pt-10 bg-projectWhite-500">
-      <%- contents %>
-    </main>
+    <main class="lg:pt-10 bg-projectWhite-500"><%- contents %></main>
 
     <footer class="footer bg-projectWhite-500">
       <div class="container">
@@ -174,6 +165,13 @@
         >
       </div>
     </footer>
+    <div
+      id="burger-nav-mask"
+      class="fixed inset-0 h-screen transition-opacity duration-500 mt-[309px] opacity-0 bg-black/50 -z-10"
+    >
+      <!-- 漢堡遮罩 -->
+    </div>
+    <!-- 漢堡遮罩end -->
     <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>

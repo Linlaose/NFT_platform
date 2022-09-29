@@ -5,6 +5,7 @@ const burgerTopLine = document.querySelector('#burger-top-line');
 const burgerMidLine = document.querySelector('#burger-mid-line');
 const burgerBtmLine = document.querySelector('#burger-btm-line');
 const burgerNav = document.querySelector('#burger-nav');
+const mainContent = document.querySelector('#main-content');
 const burgerNavMask = document.querySelector('#burger-nav-mask');
 const xMark = document.querySelector('#xmark');
 
