@@ -83,6 +83,41 @@ btnSearchCancel.addEventListener('click', function () {
 /* search end */
 "use strict";
 
+// 變數
+var tabArtwork = document.querySelector('#tab-artwork');
+var tabCollection = document.querySelector('#tab-collection');
+var artworkBorder = document.querySelector('#artwork-border');
+var collectionBorder = document.querySelector('#collection-border'); // 方法
+
+var artworkBorderShow = function artworkBorderShow() {
+  // artwork
+  artworkBorder.classList.remove('hidden');
+  tabArtwork.classList.remove('border-transparent', 'text-projectIndigo-500');
+  tabArtwork.classList.add('border-b-0', 'border-1', 'border-black'); // collection
+
+  tabCollection.classList.add('border-transparent', 'text-projectIndigo-500');
+  collectionBorder.classList.add('hidden');
+};
+
+var collectionBorderShow = function collectionBorderShow() {
+  // artwork
+  artworkBorder.classList.add('hidden');
+  tabArtwork.classList.add('border-transparent', 'text-projectIndigo-500'); // collection
+
+  tabCollection.classList.remove('border-transparent', 'text-projectIndigo-500');
+  tabCollection.classList.add('border-b-0', 'border-1', 'border-black');
+  collectionBorder.classList.remove('hidden');
+}; // 監聽事件
+
+
+tabArtwork.addEventListener('click', function () {
+  artworkBorderShow();
+});
+tabCollection.addEventListener('click', function () {
+  collectionBorderShow();
+});
+"use strict";
+
 var _Swiper;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }

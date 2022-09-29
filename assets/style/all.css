@@ -737,6 +737,12 @@ select {
 .top-16 {
   top: 4rem;
 }
+.left-0 {
+  left: 0px;
+}
+.-bottom-1 {
+  bottom: -0.25rem;
+}
 .z-10 {
   z-index: 10;
 }
@@ -925,6 +931,9 @@ select {
       -ms-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
           transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+.cursor-pointer {
+  cursor: pointer;
+}
 .grid-cols-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
@@ -1041,6 +1050,9 @@ select {
 }
 .border-t-1 {
   border-top-width: 1px;
+}
+.border-b {
+  border-bottom-width: 1px;
 }
 .border-black {
   --tw-border-opacity: 1;
@@ -1188,6 +1200,9 @@ select {
 .pt-4 {
   padding-top: 1rem;
 }
+.pt-10 {
+  padding-top: 2.5rem;
+}
 .text-left {
   text-align: left;
 }
@@ -1300,6 +1315,10 @@ select {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
+.text-projectIndigo-500 {
+  --tw-text-opacity: 1;
+  color: rgb(128 128 128 / var(--tw-text-opacity));
+}
 .opacity-0 {
   opacity: 0;
 }
@@ -1358,7 +1377,7 @@ select {
   -webkit-writing-mode: vertical-lr;
       -ms-writing-mode: tb-lr;
           writing-mode: vertical-lr;
-} ;
+}
 
 /* carousel */
 /* artistSiwper */
@@ -1642,6 +1661,10 @@ select {
     display: block;
   }
 
+  .lg\:inline-block {
+    display: inline-block;
+  }
+
   .lg\:flex {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1858,6 +1881,11 @@ select {
     padding-bottom: 2.5rem;
   }
 
+  .lg\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
   .lg\:pb-6 {
     padding-bottom: 1.5rem;
   }
@@ -1880,6 +1908,10 @@ select {
 
   .lg\:pt-10 {
     padding-top: 2.5rem;
+  }
+
+  .lg\:text-left {
+    text-align: left;
   }
 
   .lg\:text-5xl {
