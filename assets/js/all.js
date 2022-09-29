@@ -7,6 +7,7 @@ var burgerTopLine = document.querySelector('#burger-top-line');
 var burgerMidLine = document.querySelector('#burger-mid-line');
 var burgerBtmLine = document.querySelector('#burger-btm-line');
 var burgerNav = document.querySelector('#burger-nav');
+var mainContent = document.querySelector('#main-content');
 var burgerNavMask = document.querySelector('#burger-nav-mask');
 var xMark = document.querySelector('#xmark'); // 方法函式
 
