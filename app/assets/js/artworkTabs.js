@@ -27,9 +27,11 @@ const collectionBorderShow = (() => {
 });
 
 // 監聽事件
-tabArtwork.addEventListener('click', () => {
-  artworkBorderShow();
-})
-tabCollection.addEventListener('click', () => {
-  collectionBorderShow();
-})
+if (tabArtwork) {
+  tabArtwork.addEventListener('click', () => {
+    artworkBorderShow();
+  })
+  tabCollection.addEventListener('click', () => {
+    collectionBorderShow();
+  })
+}
