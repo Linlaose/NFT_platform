@@ -83,43 +83,6 @@ btnSearchCancel.addEventListener('click', function () {
 /* search end */
 "use strict";
 
-// 變數
-var tabArtwork = document.querySelector('#tab-artwork');
-var tabCollection = document.querySelector('#tab-collection');
-var artworkBorder = document.querySelector('#artwork-border');
-var collectionBorder = document.querySelector('#collection-border'); // 方法
-
-var artworkBorderShow = function artworkBorderShow() {
-  // artwork
-  artworkBorder.classList.remove('hidden');
-  tabArtwork.classList.remove('border-transparent', 'text-projectIndigo-500');
-  tabArtwork.classList.add('border-b-0', 'border-1', 'border-black'); // collection
-
-  tabCollection.classList.add('border-transparent', 'text-projectIndigo-500');
-  collectionBorder.classList.add('hidden');
-};
-
-var collectionBorderShow = function collectionBorderShow() {
-  // artwork
-  artworkBorder.classList.add('hidden');
-  tabArtwork.classList.add('border-transparent', 'text-projectIndigo-500'); // collection
-
-  tabCollection.classList.remove('border-transparent', 'text-projectIndigo-500');
-  tabCollection.classList.add('border-b-0', 'border-1', 'border-black');
-  collectionBorder.classList.remove('hidden');
-}; // 監聽事件
-
-
-if (tabArtwork) {
-  tabArtwork.addEventListener('click', function () {
-    artworkBorderShow();
-  });
-  tabCollection.addEventListener('click', function () {
-    collectionBorderShow();
-  });
-}
-"use strict";
-
 var _Swiper;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -162,4 +125,65 @@ if (artworkDetect) {
     artworkMasonry.layout();
   });
 }
+"use strict";
+
+// tabs
+// 變數
+var tabArtwork = document.querySelector('#tab-artwork');
+var tabCollection = document.querySelector('#tab-collection');
+var artworkBorder = document.querySelector('#artwork-border');
+var collectionBorder = document.querySelector('#collection-border'); // 方法
+
+var artworkBorderShow = function artworkBorderShow() {
+  // artwork
+  artworkBorder.classList.remove('hidden');
+  tabArtwork.classList.remove('border-transparent', 'text-projectIndigo-500');
+  tabArtwork.classList.add('border-b-0', 'border-1', 'border-black'); // collection
+
+  tabCollection.classList.add('border-transparent', 'text-projectIndigo-500');
+  collectionBorder.classList.add('hidden');
+};
+
+var collectionBorderShow = function collectionBorderShow() {
+  // artwork
+  artworkBorder.classList.add('hidden');
+  tabArtwork.classList.add('border-transparent', 'text-projectIndigo-500'); // collection
+
+  tabCollection.classList.remove('border-transparent', 'text-projectIndigo-500');
+  tabCollection.classList.add('border-b-0', 'border-1', 'border-black');
+  collectionBorder.classList.remove('hidden');
+}; // 監聽事件
+
+
+if (tabArtwork) {
+  tabArtwork.addEventListener('click', function () {
+    artworkBorderShow();
+    artworkShow();
+  });
+  tabCollection.addEventListener('click', function () {
+    collectionBorderShow();
+    artworkHide();
+  });
+} // tabs end
+// content
+// 變數
+
+
+var artwork = document.querySelector('#artwork');
+var collection = document.querySelector('#collection');
+var productSection = document.querySelector('#productSection'); // 方法
+
+var artworkHide = function artworkHide() {
+  artwork.classList.add('opacity-0', 'absolute', '-z-10', 'top-0');
+  collection.classList.remove('opacity-0', 'absolute', 'top-0', '-z-10', 'scale-0');
+  productSection.classList.remove('lg:pb-32');
+  productSection.classList.add('lg:pb-8');
+};
+
+var artworkShow = function artworkShow() {
+  artwork.classList.remove('opacity-0', 'absolute', '-z-10', 'top-0');
+  collection.classList.add('opacity-0', 'absolute', 'top-0', '-z-10', 'scale-0');
+  productSection.classList.remove('lg:pb-8');
+  productSection.classList.add('lg:pb-32');
+}; // content end
 //# sourceMappingURL=all.js.map
