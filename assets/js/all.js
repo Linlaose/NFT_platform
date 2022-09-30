@@ -110,12 +110,14 @@ var collectionBorderShow = function collectionBorderShow() {
 }; // 監聽事件
 
 
-tabArtwork.addEventListener('click', function () {
-  artworkBorderShow();
-});
-tabCollection.addEventListener('click', function () {
-  collectionBorderShow();
-});
+if (tabArtwork) {
+  tabArtwork.addEventListener('click', function () {
+    artworkBorderShow();
+  });
+  tabCollection.addEventListener('click', function () {
+    collectionBorderShow();
+  });
+}
 "use strict";
 
 var _Swiper;
@@ -147,13 +149,17 @@ var artistSwiper = new Swiper(".artistSwiper", (_Swiper = {
 }), _Swiper));
 "use strict";
 
-var artworkMasonry = new Masonry('#artwork-masonry', {
-  itemSelector: '#artwork-item',
-  horizontalOrder: true,
-  columnWidth: '#grid-sizer',
-  percentPosition: true
-});
-imagesLoaded("#artwork-masonry").on("progress", function () {
-  artworkMasonry.layout();
-});
+var artworkDetect = document.querySelector('#artwork-masonry');
+
+if (artworkDetect) {
+  var artworkMasonry = new Masonry('#artwork-masonry', {
+    itemSelector: '#artwork-item',
+    horizontalOrder: true,
+    columnWidth: '#grid-sizer',
+    percentPosition: true
+  });
+  imagesLoaded("#artwork-masonry").on("progress", function () {
+    artworkMasonry.layout();
+  });
+}
 //# sourceMappingURL=all.js.map
